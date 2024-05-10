@@ -119,8 +119,18 @@ public:
         renumerate(statesMap);
         if (j != 0) removeState(statesCount);
     }
-
-    void optimize
+    
+    // TO DO
+    // void optimize() {
+    //     map<int, int> unequivalentStates;
+    //     for(int i = 1; i <= statesCount; i++) {
+    //         for(int j = i + 1; j <= statesCount; j++) {
+    //             if (allowedStates.count(i) * allowedStates.count(j) == 0 && allowedStates.count(i) + allowedStates.count(j) != 0) {
+    //                 unequivalentStates.insert(make_pair(i, j))
+    //             }
+    //         }
+    //     }
+    // }
 
     friend ostream& operator<< (ostream& os, const FinAutomata& dfa);
 };
